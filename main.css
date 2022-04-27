@@ -1,0 +1,99 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(img/fashion/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .5s ease-in;
+  object-fit: cover;
+}
+body::before{
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* main image */
+
+.image{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.image img{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  top: -15vh;
+  left: -15vw;
+  transition: 0.8s;
+  object-fit: cover;
+}
+
+/* buttons */
+
+.arrow{
+  position: absolute;
+  background-color: transparent;
+  color: antiquewhite;
+  font-size: 3rem;
+  border: 0;
+  cursor: pointer;
+  transition: transform .5s ease-in-out;
+}
+.right-arrow{
+  transform: translateX(40vw);
+}
+.right-arrow:hover{
+  transform: translateX(41vw);
+  color: skyblue;
+}
+.left-arrow{
+  transform: translateX(-40vw);
+}
+.left-arrow:hover{
+  transform: translateX(-41vw);
+  color: skyblue;
+}
+
+/* media */
+
+@media screen and (max-width: 500px) {
+  .arrow{
+    font-size: 2rem;
+  }
+  .right-arrow{
+    transform: translateX(42vw);
+  }
+  .left-arrow{
+    transform: translateX(-42vw);
+  }
+}
